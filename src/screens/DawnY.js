@@ -20,14 +20,14 @@ export default class DawnY extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>Dawn Y.</Title>
+            <Title style={{marginLeft:5,}}>Dawn Y.</Title>
           </Body>
       </Header>
        
     {/* <Content> */}
         <Tabs>
           <Tab heading={ <TabHeading style={{backgroundColor:'#565D5A',color:'#ffff'}}><Text>BIO</Text></TabHeading>}>
-            <Bio />
+            <Bio style={{color:'#ffff'}}/>
           </Tab>
           <Tab heading={ <TabHeading  style={{backgroundColor:'#565D5A',color:'#ffff'}}><Text>SERVICES</Text></TabHeading>}>
             <Services/>

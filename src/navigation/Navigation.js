@@ -4,11 +4,15 @@ import Signup  from '../screens/Signup'
 import Drawer from '../screens/drawer'
 import Payment from '../screens/Payment'
 import DawnY from '../screens/DawnY'
+import BottomTab from '../screens/Confirm'
 
 const StackNavigator = createStackNavigator({
         
-        DawnY: {
-          screen: DawnY
+        // DawnY: {
+        //   screen: DawnY
+        // },
+        BottomTab: {
+          screen: BottomTab
         },
         Payment: {
           screen: Payment

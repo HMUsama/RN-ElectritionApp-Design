@@ -11,7 +11,7 @@ export default class Portfolio extends React.Component {
 
   render() {
     return (
-     <Container style={{display:"flex",flex: 1,backgroundColor:'#EE9E1A',marginTop:0,}}>
+     <Container style={{display:"flex",flex: 1,backgroundColor:'#ffff',marginTop:0,}}>
         <Content style={{}}>
             <View style={{flex: 1, flexDirection: 'column',}}>
                 <View style={{flex: 1, flexDirection: 'row',marginLeft:2,marginRight:2,marginTop:3}}>  
