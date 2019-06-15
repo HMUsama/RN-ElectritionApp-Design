@@ -1,18 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Content,List,ListItem,Left,Icon,Body,Right,Switch,Header, Button} from 'native-base'
-import { Constants } from 'expo';
+import {Drawer,Content,List,ListItem,Left,Body,Right,Switch,Header, Button} from 'native-base'
+import Icon from "react-native-vector-icons/FontAwesome"; 
+import SideBar from '../components/Menubar/SideBar'
 
-export default class Login extends React.Component {
-  
-  navigation=()=>{
-    this.props.navigation.navigate("Payment")
-  }
-  goto_Dawn=()=>{
-    this.props.navigation.navigate("DawnY")
-  }
+
+export default class MunuBar extends React.Component {  
+
   render() {
     return (
+      <Drawer ref={(ref) => { this.drawer = ref; }}
+        content={
+        <SideBar navigator={this.navigator} />
+      } 
+        onClose={() => this.closeDrawer()}
+      > 
       <Content style={{backgroundColor:'#ffff'}}>
            <Header style={{backgroundColor:'#194D33',height:150,}}>
            <Body>
@@ -26,10 +28,10 @@ export default class Login extends React.Component {
               </Left>
               <Body>
                   <Left>
-                    {/* <Button transparent > */}
-                    {/* <Icon name='arrow-right'/> <Text>USama</Text> */}
-                    {/* </Button> */}
-                    <Text  onPress={this.goto_Dawn}>USama</Text> 
+                    <Button transparent >
+                    <Icon name='arrow-right'/> <Text>USama</Text>
+                    </Button>
+                    <Text>USama</Text> 
                  </Left>
               </Body>
               <Right>
@@ -38,10 +40,7 @@ export default class Login extends React.Component {
               </ListItem>
           </List>
       </Content>
+      </Drawer>
     );
   }
 }
-
-const styles = StyleSheet.create({
- 
-});

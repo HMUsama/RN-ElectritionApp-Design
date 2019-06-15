@@ -6,9 +6,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import SideBar from '../screens/MenuDrawer';
 import visa from '../../assets/visa2.png';
 import visa1 from '../../assets/visa3.png';
-// import visa1 from '../../assets/master.jpg';
-// import card from '../../assets/card.png'
-// import master from '../../assets/master.jpg';
 
 export default class Payment extends React.Component {
  
@@ -29,15 +26,15 @@ export default class Payment extends React.Component {
      >
      <Container style={{marginTop: Constants.statusBarHeight,backgroundColor:'#ffff'}}>
      <Header style={{backgroundColor:'#b80000'}}>
-          <Left>
-            <Button transparent >
-              <Icon name='arrow-left' size={25} color={'#ffff'}/>
-            </Button>
-          </Left>
-          <Body>
-            <Title>Payment</Title>
-          </Body>
-   </Header>
+            <Left>
+              <Button transparent >
+                <Icon name='arrow-left' size={25} color={'#ffff'}/>
+              </Button>
+            </Left>
+            <Body>
+              <Title>Payment</Title>
+            </Body>
+    </Header>
     <Content>
         <View style={{
             flex: 1,

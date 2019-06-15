@@ -1,31 +1,30 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import Login from '../screens/Login' 
 import Signup  from '../screens/Signup' 
-import Drawer from '../screens/drawer'
-import Payment from '../screens/Payment'
-import DawnY from '../screens/DawnY'
-import BottomTab from '../screens/Confirm'
+import Payment    from '../screens/Payment'
+import DawnY      from '../screens/DawnY'
+import BottomTab  from '../screens/Confirm'
+import HowItWork  from '../screens/HowItWork'
+import Setting from '../screens/Setting'
+import SideBar from '../components/Menubar/SideBar'
 
 const StackNavigator = createStackNavigator({
         
-        // DawnY: {
-        //   screen: DawnY
+        HowItWork: {
+          screen: HowItWork
+        },
+        Setting: {
+          screen: Setting
+        },
+        // BottomTab: {
+        //   screen: BottomTab
         // },
-        BottomTab: {
-          screen: BottomTab
-        },
-        Payment: {
-          screen: Payment
-        },
-        // Drawer: {
-        //   screen: Drawer
+        // Payment: {
+        //   screen: Payment
         // },
-        Login: {
-            screen: Login
-        },
-        Signup: {
-            screen: Signup
-        },
+        // SideBar: {
+        //   screen: SideBar
+        // },
         
 },
     {
