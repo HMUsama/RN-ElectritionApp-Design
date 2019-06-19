@@ -44,28 +44,30 @@ export default class Setting extends React.Component {
       onClose={() => this.closeDrawer()}
     > 
     <Container style={{marginTop: Constants.statusBarHeight,}}>
-        <Header style={{backgroundColor:'#ffff',height:150,borderBottom:0}}>
+        <Header style={{backgroundColor:'#fffccc',height:150,borderBottom:0}}>
           <View style={{flex: 1, flexDirection: 'row'}}>
             <View style={{marginLeft:8,marginTop:25}}>
               <Left>
                   <Button transparent >
-                    <Icon name='bars' size={35} color={'#ff1a1a'} onPress={()=>this.openDrawer()}/>
+                    <Icon name='bars' size={35} color={'#ff1a1a'} 
+                    // onPress={()=>this.openDrawer()}
+                    onPress={()=>this.props.navigation.openDrawer()}
+                    />
                   </Button>
               </Left>
             </View>
             <Body>
             </Body>
           </View>
-              
-              
         </Header>
         <Content>
-        <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={{marginLeft:80,marginTop:30,backgroundColor:'#000',height:100}}>
+        <View style={{flex: 1,}}>
+          <View style={{marginLeft:0,marginTop:0,backgroundColor:'#000',color:'#fff',height:100}}>
+            <Text>POLO</Text>
           </View>
-          <View style={{marginLeft:90,marginTop:40,backgroundColor:'#000',height:100}}>
+          <View style={{marginLeft:0,marginTop:0,backgroundColor:'#f5f8',height:100}}>
           </View>
-          <View style={{marginLeft:90,marginTop:40,backgroundColor:'#000',height:100}}>
+          <View style={{marginLeft:0,marginTop:0,backgroundColor:'#ff1a',height:100}}>
           </View>
         </View>
         </Content>

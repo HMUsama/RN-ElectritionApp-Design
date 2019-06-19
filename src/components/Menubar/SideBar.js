@@ -1,16 +1,20 @@
 import React from 'react'
 import { Text, View ,TouchableOpacity} from 'react-native'
-import {Container,Content,List,ListItem,Left,Body,Right,Switch,Header, Button} from 'native-base'
+import {Container,Drawer,Content,List,ListItem,Left,Body,Right,Switch,Header, Button} from 'native-base'
 import Icon from "react-native-vector-icons/FontAwesome"
 
 export default class SideBar extends React.Component {
  
   Setting=()=>{ 
     console.log("THIS PROPS",this.props)
-    // this.props.navigation.navigate('HowItWork')
+    // this.props.navigation.navigate('Setting')
    };
   render() {
     return (
+    // <Drawer ref={(ref) => { this.drawer = ref; }}
+    //   content={<SideBar navigator={this.navigator} />} 
+    //   onClose={() => this.closeDrawer()}
+    //   > 
       <Container>
         <Content style={{backgroundColor:'#333333',}}>
           <ListItem>
@@ -30,7 +34,7 @@ export default class SideBar extends React.Component {
           <ListItem style={{marginTop:15,}}>
             <Left>
               <Icon name="wrench" style={{marginTop:5,marginLeft:0,fontSize:30,color:'#565D5A' }}/>
-              <TouchableOpacity onPress={()=>this.Setting()}>
+              <TouchableOpacity onPress={this.Setting}>
               <Text style={{marginTop:5,marginLeft:30,fontSize:15,color:'#ffff' }}>SETTINGS</Text>
               </TouchableOpacity>
             </Left>
@@ -69,6 +73,7 @@ export default class SideBar extends React.Component {
           </ListItem>
         </Content>
       </Container>
+      // </Drawer>
     );
   }
 }

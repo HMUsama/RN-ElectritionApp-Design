@@ -5,6 +5,7 @@ import { Constants } from 'expo';
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Dropdown } from 'react-native-material-dropdown'; 
 import SideBar from '../components/Menubar/SideBar'
+// import MenuBar from './MenuBar'
 
 export default class HowItWork extends React.Component {
  
@@ -37,58 +38,81 @@ export default class HowItWork extends React.Component {
     },
     ];
     return (
-      <Drawer ref={(ref) => { this.drawer = ref; }}
-      content={
-      <SideBar navigator={this.navigator} />
-    } 
-      onClose={() => this.closeDrawer()}
-    > 
-    <Container style={{marginTop: Constants.statusBarHeight,}}>
-        <Header style={{backgroundColor:'#ffff',height:150,borderBottom:0}}>
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <View style={{marginLeft:8,marginTop:25}}>
-            <Left>
-                    <Button transparent >
-                     <Icon name='bars' size={35} color={'#ff1a1a'} onPress={()=>this.openDrawer()}/>
-                    </Button>
-                </Left>
-            </View>
-            <View style={{marginLeft:50,marginTop:2,}}>
-            <Body>
-                <View style={{width:200,height:50, borderWidth: 1,borderColor: '#fff', borderBottomLeftRadius: 5,}}>
-                <Dropdown 
-                    // label='Select category'
-                    data={Category}
-                    selectedItemColor={'#ff1a1a'}
-                    onChangeText={e => this.setState({ category: e })}
-                  />
-                </View>
-                <View style={{width:200,borderRadius:5}}>
-                <Dropdown
-                    // label='Select category'
-                    data={Category}
-                    selectedItemColor={'#ff1a1a'}
-                    onChangeText={e => this.setState({ category: e })}
-                  />
-                </View>
-                </Body>
-            </View>
+    //   <Drawer ref={(ref) => { this.drawer = ref; }}
+    //   content={<MenuBar navigator={this.navigator} />} 
+    //   onClose={() => this.closeDrawer()}
+    // > 
+    <Container  style={{marginTop: Constants.statusBarHeight,}}>
+      
+        <Header style={{ backgroundColor: "transparent",backgroundColor:'#ffcccc',height:40,}} iosBarStyle={"light-content"} noShadow>
+          <View style={{flex: 1, flexDirection: 'row',}}>
+             <Left style={{marginTop:25}}>
+                  <Button transparent >
+                    <Icon name='bars' size={35} color={'#ff1a1a'} onPress={()=>this.openDrawer()}/>
+                  </Button>
+             </Left>
           </View>
-              
-              
+            <View  style={{flex: 1, flexDirection: 'column',}}>
+              <Body style={{backgroundColor:'#000',width:100,height:40,marginTop:50,marginLeft:50,borderColor:'#000',borderBottomColor:"#92C9EB"}}>
+                <Dropdown  baseColor={'#fff'}  data={Category} />  
+              </Body>
+            </View>
         </Header>
+       
+
+
+
         <Content>
-        <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={{marginLeft:80,marginTop:30,backgroundColor:'#000',height:100}}>
-          </View>
-          <View style={{marginLeft:90,marginTop:40,backgroundColor:'#000',height:100}}>
-          </View>
-          <View style={{marginLeft:90,marginTop:40,backgroundColor:'#000',height:100}}>
-          </View>
-        </View>
+            {/* <View style={{flex: 1, flexDirection: 'column',marginTop:1}}>
+              <View style={{flex: 1, flexDirection: 'row',marginTop:1}}>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1,}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+              </View>
+              <View style={{flex: 1, flexDirection: 'row',marginTop:1}}>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1,}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+              </View>
+              <View style={{flex: 1, flexDirection: 'row',marginTop:1}}>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1,}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+              </View>
+              <View style={{flex: 1, flexDirection: 'row',marginTop:1}}>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1,}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+                <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1}}>
+                  <Text>Pakistan</Text>
+                </View>
+              </View>
+            </View>
+       */}
         </Content>
     </Container>
-      </Drawer>
+      // </Drawer>
     );
   }
 }

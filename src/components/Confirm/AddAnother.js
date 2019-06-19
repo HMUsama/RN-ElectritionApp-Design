@@ -6,10 +6,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 // import { Button } from 'react-native-elements';
 
 export default class AddAnother extends React.Component {
- 
-  link=()=>{
-    this.props.navigation.navigate("createBottomTabNavigator")
-  }
 
 
   render() {
@@ -17,7 +13,7 @@ export default class AddAnother extends React.Component {
      <Container style={{marginTop: Constants.statusBarHeight,backgroundColor:'#ffff'}}>
             <Header style={{backgroundColor:'#ff1a1a'}}>
                     <Left>
-                        <Button transparent >
+                        <Button transparent onPress={()=>this.props.navigation.navigate('Payment')}>
                         <Icon name='arrow-left' size={25} color={'#ffff'}/>
                         <Title style={{marginLeft:20}}>Confirm</Title>
                         </Button>

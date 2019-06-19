@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Navigator from './src/navigation/Navigation';
+// import MenuBar from './src/screens/MenuBar'
 import { Font ,AppLoading } from 'expo';
 import { Root } from "native-base";
 import { Ionicons } from '@expo/vector-icons';
@@ -28,6 +29,7 @@ export default class App extends React.Component {
     }
     return (
       <Root>
+       {/* <MenuBar/> */}
        <Navigator/>
        </Root>
     )

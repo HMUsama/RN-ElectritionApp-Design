@@ -12,7 +12,8 @@ export default class Services extends React.Component {
         { title: "BROWN WAXING", content: "Lorem ipsum dolor sit amet" },
         { title: "CHAIN", content: "Lorem ipsum dolor sit amet" },
         { title: "CLASSIC MANICULAR", content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" },
-        { title: "CLASSIC MANICULAR", content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" },
+        { title: "CLASSIC MANICULAR", content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
+          Content:"12:12" },
       ];
     return (
      <Container style={{marginTop: Constants.statusBarHeight,backgroundColor:'#ffff'}}>
@@ -31,6 +32,7 @@ export default class Services extends React.Component {
         <Content style={{marginTop:10,borderTopWidth:0}}>
           <Accordion
             dataArray={dataArray}
+            iconStyle={{ backgroundColor:'#D12',fontSize:20,color:'#fff' }}
             headerStyle={{ backgroundColor: "#ffffff" }}
             contentStyle={{ backgroundColor: "#F69B94" }}
           />
