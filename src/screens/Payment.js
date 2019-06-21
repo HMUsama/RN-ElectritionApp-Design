@@ -23,7 +23,7 @@ export default class Payment extends React.Component {
             <Left>
               <Button transparent>
             <TouchableOpacity 
-            onPress={()=>this.props.navigation.navigate('goBack')}
+            onPress={()=>this.props.navigation.toggleDrawer()}
             >
                 <Icon name='arrow-left' size={25} color={'#ffff'}/>
             </TouchableOpacity>

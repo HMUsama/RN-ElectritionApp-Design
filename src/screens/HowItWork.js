@@ -10,7 +10,8 @@ import SideBar from '../components/Menubar/SideBar'
 export default class HowItWork extends React.Component {
  
   openDrawer (){ 
-    this.drawer._root.open()
+    // this.drawer._root.open()
+    this.props.navigation.toggleDrawer()
    };
    closeDrawer (){ 
     this.drawer._root.close()
@@ -63,7 +64,7 @@ export default class HowItWork extends React.Component {
 
 
         <Content>
-            {/* <View style={{flex: 1, flexDirection: 'column',marginTop:1}}>
+            <View style={{flex: 1, flexDirection: 'column',marginTop:1}}>
               <View style={{flex: 1, flexDirection: 'row',marginTop:1}}>
                 <View style={{marginLeft:0,marginTop:0,backgroundColor:'#fff',height:160,width: 150,borderTopColor:'#fff',borderColor:'#ff1a1a',borderWidth:1,}}>
                   <Text>Pakistan</Text>
@@ -109,7 +110,7 @@ export default class HowItWork extends React.Component {
                 </View>
               </View>
             </View>
-       */}
+      
         </Content>
     </Container>
       // </Drawer>

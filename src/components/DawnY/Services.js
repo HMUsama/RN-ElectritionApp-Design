@@ -12,8 +12,7 @@ export default class Services extends React.Component {
         { title: "BROWN WAXING", content: "Lorem ipsum dolor sit amet" },
         { title: "CHAIN", content: "Lorem ipsum dolor sit amet" },
         { title: "CLASSIC MANICULAR", content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" },
-        { title: "CLASSIC MANICULAR", content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
-          Content:"12:12" },
+        { title: "CLASSIC MANICULAR", content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet", },
       ];
     return (
      <Container style={{marginTop: Constants.statusBarHeight,backgroundColor:'#ffff'}}>

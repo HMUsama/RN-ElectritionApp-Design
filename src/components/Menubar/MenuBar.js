@@ -16,18 +16,8 @@ constructor(){
     }
 }
  
-// navlink(nav,text){
-//         return(
-//         <TouchableOpacity style={{flex:1,height:20}} onPress={()=>this.props.navigation.navigate(nav)} >
-//             <Text style={styles.link}>
-//             {text}
-//             {/* Usama */}
-//             </Text>
-//         </TouchableOpacity>
-//     )
-// }
 HowItWork=()=>{
-    this.props.navigation.navigate("HowItWork")
+  this.props.navigation.navigate("HowItWork")
 }
 Setting=()=>{
     this.props.navigation.navigate("Payment")
@@ -47,14 +37,16 @@ DawnY=()=>{
         <Content style={{backgroundColor:'#333333',}}>
           <ListItem>
             <Left>
-              {/* <Icon name="bars"/> */}
+              {/* <Icon name="bars"/> */} 
               <Text style={{marginTop:40,marginLeft:70,fontSize:30,color:'#ff7733',padding:20 }}>Usama </Text>
             </Left>
           </ListItem>
           <ListItem style={{marginTop:15,}}>
             <Left>
               <Icon name="cog" style={{marginTop:5,marginLeft:0,fontSize:30,color:'#565D5A' }}/>
-              <TouchableOpacity onPress={this.HowItWork}>
+              <TouchableOpacity 
+              onPress={this.HowItWork}
+              >
               <Text style={{marginTop:5,marginLeft:30,fontSize:15,color:'#ffff' }}>HOW IT WORKS ?</Text>
               </TouchableOpacity>
             </Left>
